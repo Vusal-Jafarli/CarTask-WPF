@@ -1,0 +1,39 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net6.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWPF>true</UseWPF>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="DataBase\**" />
+    <Compile Remove="ResourceDictionaries\**" />
+    <Compile Remove="StaticFiles\**" />
+    <EmbeddedResource Remove="DataBase\**" />
+    <EmbeddedResource Remove="ResourceDictionaries\**" />
+    <EmbeddedResource Remove="StaticFiles\**" />
+    <None Remove="DataBase\**" />
+    <None Remove="ResourceDictionaries\**" />
+    <None Remove="StaticFiles\**" />
+    <Page Remove="DataBase\**" />
+    <Page Remove="ResourceDictionaries\**" />
+    <Page Remove="StaticFiles\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Remove="Images\back.jpg" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Include="Images\back.jpg">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MaterialDesignThemes" Version="4.9.0" />
+  </ItemGroup>
+
+</Project>
